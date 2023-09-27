@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_task2</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+h1 {
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#sortedString {
+    font-weight: bold;
+    color: #333;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Alphabetical Sort</h1>
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" placeholder="Enter a string">
+        <button onclick="sortString()">Sort</button>
+        <p id="sortedString"></p>
+    </div>
+    <script>
+        function sortString() {
+           const inputElement = document.getElementById("inputString");
+           const sortedStringElement = document.getElementById("sortedString");
+
+           const inputString = inputElement.value.trim();
+           const sortedString = inputString.split("").sort().join("");
+
+            sortedStringElement.textContent = `Sorted String: ${sortedString}`;
+        }
+
+    </script>
+</body>
+</html>

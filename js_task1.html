@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_task1</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #0591a4;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #012f37;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p#result {
+    font-size: 18px;
+    margin-top: 20px;
+}
+    </style>
+</head>
+
+
+
+<body>
+    <h1>Number Reversal</h1>
+    <label for="num">Enter a number: </label>
+    <input type="text" id="num" placeholder="Enter a number"> 
+    <button onclick="reverseNumber()">Reverse</button>
+    <p id="result"></p>
+
+    <script>
+        function reverseNumber() {
+            const num = document.getElementById("num").value;
+            const reversedNumber = reverseNumberString(num.toString());
+            document.getElementById("result").textContent = `Reversed Number: ${reversedNumber}`;
+
+        }
+
+        function reverseNumberString(str) {
+            const reversedStr = str.split('').reverse().join('');
+            return parseInt(reversedStr);
+        }
+    </script>
+</body>
+</html>

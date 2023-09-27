@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_task8</title>
+    <style>
+        html{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgb(231, 231, 122), violet);
+        }
+    
+        table {
+            width: 60%;
+            margin: auto;
+            border: none;
+        }
+    
+        th, td {
+            padding: 3px;
+            margin: 0;
+        }
+    
+        .intype {
+            width: 98%;
+        }
+    
+        textarea {
+            width: 98.5%;
+        }
+    
+        select {
+            width: 198px;
+        }
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        button{
+            color: white;
+            background-color: red;
+            border-radius: 20px;
+            width: 100px;
+            margin: 20px auto;
+        }
+    
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+    
+
+</head>
+<body>
+    </style>
+</head>
+<body>
+        <form id="registrationForm">
+            <h2 style="color: blue; text-align: center;">Registration form</h2>
+            <table>
+                <tr>
+                    <th><label for="fn">Full Name:</label></th>
+                    <td>
+                        <input type="text" id="fn" name="fn" class="intype">
+                        <span id="fnError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <!-- Add similar spans and IDs for other fields -->
+                <!-- Username, Email, Password, Re Password, Gender, Age, Phone number, Address, State, Country, Languages known, Declaration -->
+                <!-- Example: -->
+                <tr>
+                    <th><label for="un">Username:</label></th>
+                    <td>
+                        <input type="text" id="un" name="un" class="intype">
+                        <span id="unError" class="error-message"></span>
+                    </td>
+                </tr>
+                <!-- Repeat for other fields -->
+                <tr>
+                    <th><label for="em">Email:</label></th>
+                    <td>
+                        <input type="email" id="em" name="em" class="intype">
+                        <span id="emError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="pwd">Password:</label></th>
+                    <td>
+                        <input type="password" id="pwd" name="un" class="intype">
+                        <span id="pwdError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="re">Re-enter password:</label></th>
+                    <td>
+                        <input type="password" id="re" name="re" class="intype">
+                        <span id="reError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label>Gender:</label></th>
+                    <td>
+                        <input type="radio" name="gen" id="male" value="Male">
+                        <label for="male">Male</label>
+                
+                        <input type="radio" name="gen" id="female" value="Female">
+                        <label for="female">Female</label>
+                
+                        <span id="genError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="age">Age:</label></th>
+                    <td>
+                        <input type="number" id="age" name="age" class="intype">
+                        <span id="ageError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="ph">phone number:</label></th>
+                    <td>
+                        <input type="number" id="ph" name="ph" class="intype">
+                        <span id="phError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="add">Address:</label></th>
+                    <td>
+                        <input type="text-area" id="add" name="add" class="intype">
+                        <span id="addError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="state">state:</label></th>
+                    <td>
+                        <input type="number" id="state" name="state" class="intype">
+                        <span id="stateError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th><label for="country">Country:</label></th>
+                    <td>
+                        <select id="country" name="country">
+                            <option value="">Choose your country</option>
+                            <option value="India">India</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="China">China</option>
+                        </select>
+                        <span id="countryError" class="error-message"></span>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th><label>Languages known:</label></th>
+                    <td>
+                        <input type="checkbox" name="lan" id="eng" value="eng">
+                        <label for="eng">English</label>
+                
+                        <input type="checkbox" name="lan" id="kan" value="kan">
+                        <label for="kan">Kannada</label>
+                
+                        <input type="checkbox" name="lan" id="hin" value="hin">
+                        <label for="hin">Hindi</label>
+                
+                        <input type="checkbox" name="lan" id="tel" value="tel">
+                        <label for="tel">Telugu</label>
+                        <span id="lanError" class="error-message"></span>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="declaration" name="declaration">
+                        <label for="declaration">Hereby I declare all the given details are true</label>
+                        <span id="declarationError" class="error-message"></span>
+                    </td>
+                </tr>
+     
+    
+                <tr>
+                    <td colspan="2" style="text-align: right;">
+                       Log in to <a href="#">Ethnus</a>Website
+                    </td>
+                </tr>
+            </table>
+            
+        </form>
+        <button name="register" value="Register">REGISTER</button></div>
+
+
+
+    <script>
+        const form = document.getElementById("registrationForm");
+    
+        // Function to validate a specific field
+        function validateField(field, errorField, validationFunction, errorMessage) {
+            errorField.textContent = "";
+            const value = field.value.trim();
+            if (validationFunction(value)) {
+                errorField.textContent = errorMessage;
+                errorField.style.color = "red";
+                return false;
+            }
+            return true;
+        }
+    
+        // Validation functions
+        function isRequired(value) {
+            return value === "";
+        }
+        function isvalidfn(value){
+            return !/^[A-Za-z0-9_]+$/.test(value);
+        
+
+        }
+        
+        function isValidEmail(value) {
+            return !/^\S+@\S+\.\S+$/.test(value);
+        }
+    
+        function isValidUsername(value) {
+            return !/^[A-Za-z0-9_]+$/.test(value);
+        }
+    
+        function isShortPassword(value) {
+            return value.length < 8;
+        }
+    
+        function isPasswordMismatch(password, confirmPassword) {
+            return password !== confirmPassword;
+        }
+    
+        function isInvalidAge(value) {
+            return !/^\d+$/.test(value);
+        }
+    
+        function isInvalidPhoneNumber(value) {
+            return !/^\d+$/.test(value);
+        }
+    
+        function isPoorText(value) {
+            return value.toLowerCase() === "poor";
+        }
+    
+        // Field references
+        const fullNameField = document.getElementById("fn");
+        const fullNameError = document.getElementById("fnError");
+        const usernameField = document.getElementById("un");
+        const usernameError = document.getElementById("unError");
+        const emailField = document.getElementById("em");
+        const emailError = document.getElementById("emError");
+        const passwordField = document.getElementById("pwd");
+        const passwordError = document.getElementById("pdError");
+        const reenterPasswordField = document.getElementById("re");
+        const reenterPasswordError = document.getElementById("reError");
+        const ageField = document.getElementById("age");
+        const ageError = document.getElementById("ageError");
+        const phoneNumberField = document.getElementById("ph");
+        const phoneNumberError = document.getElementById("phError");
+        const addressField = document.getElementById("add");
+        const addressError = document.getElementById("addError");
+        const stateField = document.getElementById("state");
+        const stateError = document.getElementById("stateError");
+    
+        // Event listeners for onBlur validation
+        fullNameField.addEventListener("blur", () => {
+            validateField(fullNameField, fullNameError, isRequired,isvalidfn, "Full Name is required.");
+        });
+    
+        usernameField.addEventListener("blur", () => {
+            validateField(usernameField, usernameError, isRequired, "Username is required.");
+            validateField(usernameField, usernameError, isValidUsername, "Username can only contain letters, numbers, and underscores.");
+        });
+    
+        emailField.addEventListener("blur", () => {
+            validateField(emailField, emailError, isRequired, "Email is required.");
+            validateField(emailField, emailError, isValidEmail, "Invalid email format.");
+        });
+    
+        passwordField.addEventListener("blur", () => {
+            validateField(passwordField, passwordError, isRequired, "Password is required.");
+            validateField(passwordField, passwordError, isShortPassword, "Password should be at least 8 characters long.");
+        });
+    
+        reenterPasswordField.addEventListener("blur", () => {
+            const password = passwordField.value;
+            const confirmPassword = reenterPasswordField.value;
+            validateField(reenterPasswordField, reenterPasswordError, isRequired, "Re-enter Password is required.");
+            validateField(reenterPasswordField, reenterPasswordError, isPasswordMismatch.bind(null, password), "Passwords do not match.");
+        });
+    
+        ageField.addEventListener("blur", () => {
+            validateField(ageField, ageError, isRequired, "Age is required.");
+            validateField(ageField, ageError, isInvalidAge, "Invalid age format.");
+        });
+    
+        phoneNumberField.addEventListener("blur", () => {
+            validateField(phoneNumberField, phoneNumberError, isRequired, "Phone Number is required.");
+            validateField(phoneNumberField, phoneNumberError, isInvalidPhoneNumber, "Invalid phone number format.");
+        });
+    
+        addressField.addEventListener("blur", () => {
+            validateField(addressField, addressError, isRequired, "Address is required.");
+        });
+    
+        stateField.addEventListener("blur", () => {
+            validateField(stateField, stateError, isRequired, "State is required.");
+        });
+    
+        // Form submission validation
+        form.addEventListener("submit", (event) => {
+            let isValid = true;
+    
+            // Validate all fields on form submission
+            const validationFields = [
+                { field: fullNameField, errorField: fullNameError, validation: isRequired, errorMessage: "Full Name is required." },
+                { field: usernameField, errorField: usernameError, validation: isRequired, errorMessage: "Username is required." },
+                { field: usernameField, errorField: usernameError, validation: isValidUsername, errorMessage: "Username can only contain letters, numbers, and underscores." },
+                { field: emailField, errorField: emailError, validation: isRequired, errorMessage: "Email is required." },
+                { field: emailField, errorField: emailError, validation: isValidEmail, errorMessage: "Invalid email format." },
+                { field: passwordField, errorField: passwordError, validation: isRequired, errorMessage: "Password is required." },
+                { field: passwordField, errorField: passwordError, validation: isShortPassword, errorMessage: "Password should be at least 8 characters long." },
+                { field: reenterPasswordField, errorField: reenterPasswordError, validation: isRequired, errorMessage: "Re-enter Password is required." },
+                { field: reenterPasswordField, errorField: reenterPasswordError, validation: isPasswordMismatch.bind(null, passwordField.value), errorMessage: "Passwords do not match." },
+                { field: ageField, errorField: ageError, validation: isRequired, errorMessage: "Age is required." },
+                { field: ageField, errorField: ageError, validation: isInvalidAge, errorMessage: "Invalid age format." },
+                { field: phoneNumberField, errorField: phoneNumberError, validation: isRequired, errorMessage: "Phone Number is required." },
+                { field: phoneNumberField, errorField: phoneNumberError, validation: isInvalidPhoneNumber, errorMessage: "Invalid phone number format." },
+                { field: addressField, errorField: addressError, validation: isRequired, errorMessage: "Address is required." },
+                { field: stateField, errorField: stateError, validation: isRequired, errorMessage: "State is required." },
+            ];
+    
+            for (const fieldInfo of validationFields) {
+                const isValidField = validateField(fieldInfo.field, fieldInfo.errorField, fieldInfo.validation, fieldInfo.errorMessage);
+                if (!isValidField) {
+                    isValid = false;
+                }
+            }
+    
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission if there are validation errors
+            }
+        });
+    </script>
+    
+</body>
+</html>
